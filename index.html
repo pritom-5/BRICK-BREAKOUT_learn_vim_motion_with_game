@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breakout game</title>
+    <script type="module" src="./src/score.mjs"></script>
+    <script type="module" src="./src/brick.mjs"></script>
+    <script type="module" src="./src/app.mjs"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+      }
+      canvas {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 117, 1) 60%,
+          rgba(9, 9, 121, 1) 88%
+        );
+        display: block;
+        margin: 0 auto;
+      }
+      button:hover {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <canvas
+        id="game-canvas"
+        width="480"
+        height="320"
+        style="margin-inline: auto; margin-top: 5rem"
+      ></canvas>
+      <div
+        class="control-button"
+        style="margin-inline: auto; max-width: fit-content; margin-top: 2rem"
+      >
+        <button
+          id="play-pause"
+          tabindex="0"
+          style="
+            padding: 0.5rem 1rem;
+            outline: none;
+            border: none;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 24px;
+          "
+        >
+          Play
+        </button>
+      </div>
+      <div
+        id="instructions"
+        style="
+          color: white;
+          margin-inline: auto;
+          max-width: fit-content;
+          margin-top: 2rem;
+        "
+      >
+        <ol>
+          <li>This game is to help learn vim motions: h, l to move around</li>
+          <li>h: move left</li>
+          <li>l: move right</li>
+        </ol>
+      </div>
+    </main>
+  </body>
+</html>
